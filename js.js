@@ -3,10 +3,12 @@ init();
 setInterval(getStreams, 120000);
 
 var token = window.location.hash.substring(1);
+token = token.str.substring(str.lastIndexOf("=") + 1,str.lastIndexOf("&"));
+
 if(document.location.hash) {
     window.location.hash = "";
 } else {
-    // No hash found
+    window.location.href = "https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=u0z2ilzqnt4f4zjld9ph091e7ulezf&redirect_uri=https://dahara2012.github.io/TwitchApp/&scope=viewing_activity_read";
 }
 
 function init(){
@@ -28,7 +30,7 @@ function init(){
 
     xhr.open("GET", request);
     xhr.setRequestHeader("Client-ID", "u0z2ilzqnt4f4zjld9ph091e7ulezf");
-    xhr.setRequestHeader("Authorization", "Bearer 2ffvff7nlq2p7m2fdy3kq9n2jo3glc");
+    xhr.setRequestHeader("Authorization", "Bearer "+token);
 
     xhr.send();
 }
@@ -51,7 +53,7 @@ function getStreams(){
 
     xhr.open("GET", request);
     xhr.setRequestHeader("Client-ID", "u0z2ilzqnt4f4zjld9ph091e7ulezf");
-    xhr.setRequestHeader("Authorization", "Bearer 2ffvff7nlq2p7m2fdy3kq9n2jo3glc");
+    xhr.setRequestHeader("Authorization", "Bearer "+token);
 
     xhr.send();
 }
