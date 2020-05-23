@@ -4,7 +4,7 @@ setInterval(getStreams, 120000);
 
 var token = window.location.hash.substring(1);
 if(document.location.hash) {
-    window.location.href.split('#')[0];
+    window.location.hash = "";
 } else {
     // No hash found
 }
