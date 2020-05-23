@@ -1,7 +1,7 @@
 var request = "https://api.twitch.tv/helix/streams?first=100&user_login=RocketBeansTV&user_login=dahara2012&user_login=Otmar_Pi&user_login=nm_till_behme&user_login=snickers_30&user_login=olobrolo&user_login=update_eu&user_login=DoppelnullTV&user_login=wsr_alexanderhoeltke&user_login=WSRacingESports&user_login=od0c&user_login=JWicht";
-//init();
 setInterval(getStreams, 120000);
 setInterval(refreshURL, 300000);
+setTimeout(init, 2000);
 var token = "";
 
 if(document.location.hash) {
