@@ -31,7 +31,7 @@ function init(){
 
     xhr.open("GET", request);
     xhr.setRequestHeader("Client-ID", "u0z2ilzqnt4f4zjld9ph091e7ulezf");
-    xhr.setRequestHeader("Authorization", "Bearer "+token);
+    xhr.setRequestHeader("Authorization", "Bearer "+token+"");
 
     xhr.send();
 }
@@ -54,7 +54,7 @@ function getStreams(){
 
     xhr.open("GET", request);
     xhr.setRequestHeader("Client-ID", "u0z2ilzqnt4f4zjld9ph091e7ulezf");
-    xhr.setRequestHeader("Authorization", "Bearer "+token);
+    xhr.setRequestHeader("Authorization", "Bearer "+token+"");
 
     xhr.send();
 }
