@@ -15,7 +15,7 @@ if(document.location.hash) {
 function init(){
     refreshURL();
     getStreams();
-    startStream("RocketBeansTV");
+    startStream("dahara2012");
 }
 
 function getStreams(){
