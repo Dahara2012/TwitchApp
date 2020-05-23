@@ -8,7 +8,7 @@ token = token.str.substring(str.lastIndexOf("=") + 1,str.lastIndexOf("&"));
 if(document.location.hash) {
     window.location.hash = "";
 } else {
-    window.location.href = "https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=u0z2ilzqnt4f4zjld9ph091e7ulezf&redirect_uri=https://dahara2012.github.io/TwitchApp/&scope=viewing_activity_read";
+    window.location.replace("https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=u0z2ilzqnt4f4zjld9ph091e7ulezf&redirect_uri=https://dahara2012.github.io/TwitchApp/&scope=viewing_activity_read");
 }
 
 function init(){
