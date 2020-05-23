@@ -2,6 +2,14 @@ var request = "https://api.twitch.tv/helix/streams?first=100&user_login=RocketBe
 init();
 setInterval(getStreams, 120000);
 
+if(document.location.hash) {
+    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    alert (hash);
+    // hash found
+} else {
+    // No hash found
+}
+
 function init(){
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
