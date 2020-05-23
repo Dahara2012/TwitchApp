@@ -2,10 +2,11 @@ var request = "https://api.twitch.tv/helix/streams?first=100&user_login=RocketBe
 init();
 setInterval(getStreams, 120000);
 
-var token = window.location.hash.substring(1);
-token = token.str.substring(str.lastIndexOf("=") + 1,str.lastIndexOf("&"));
+var token = "";
 
 if(document.location.hash) {
+    token = window.location.hash.substring(1);
+    token = token.str.substring(str.lastIndexOf("=") + 1,str.lastIndexOf("&"));
     window.location.hash = "";
 } else {
     window.location.replace("https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=u0z2ilzqnt4f4zjld9ph091e7ulezf&redirect_uri=https://dahara2012.github.io/TwitchApp/&scope=viewing_activity_read");
