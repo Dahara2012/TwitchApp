@@ -86,9 +86,9 @@ function refreshURL(){
         {
             if (xmlhttp.readyState==4 && xmlhttp.status==200)
             {
-                alert(xmlhttp.responseText);
+                request = xmlhttp.responseText;
             }
-        }
-        xmlhttp.open("GET", "theURL", false);
+        };
+        xmlhttp.open("GET", "https://dahara2012.github.io/TwitchApp/link.txt", false);
         xmlhttp.send();
 }
