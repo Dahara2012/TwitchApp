@@ -13,27 +13,9 @@ if(document.location.hash) {
 }
 
 function init(){
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = false;
-
-    xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-        let miefert = "";
-        let response = JSON.parse(this.response);
-        for (let index = 0; index < response.data.length; index++) {
-            console.log(response.data[index]);
-            miefert += "<button style='width:100%;' onclick='startStream(\""+response.data[index].user_name+"\")'>"+response.data[index].user_name+": "+response.data[index].title+"</button>";
-        }
-        document.getElementById("list").innerHTML = miefert;
-        startStream(response.data[0].user_name)
-    }
-    });
-
-    xhr.open("GET", request);
-    xhr.setRequestHeader("Client-ID", "u0z2ilzqnt4f4zjld9ph091e7ulezf");
-    xhr.setRequestHeader("Authorization", "Bearer "+token+"");
-
-    xhr.send();
+    refreshURL();
+    getStreams();
+    startStream("RocketBeansTV");
 }
 
 function getStreams(){
